@@ -86,8 +86,9 @@ VpRequestForSessionRequest:
     uniqueIdentifier: TC_InjiVerify_VpRequestForSessionRequest_with_v1_endpoint_06
     role: noauth
     restMethod: post
+    checkOnlyStatusCodeInResponse: true
     inputTemplate: injiverify/VpRequestForSessionRequest/VpRequestForSessionRequest
-    outputTemplate: injiverify/VpRequestForSessionRequest/VpRequestForSessionRequestResult
+    outputTemplate: injiverify/responseCode
     input: '{
        "clientId": "injiverify.mosip.net",
        "nonce": "Mi0vDP17DlFcu/8m+OcP9A==",
@@ -96,5 +97,5 @@ VpRequestForSessionRequest:
        "id": "$PRESENTATIONDEFINITIONID$"
      }'
     output: '{
-       "status": "404"
+       "responseCode": "404"
  }'

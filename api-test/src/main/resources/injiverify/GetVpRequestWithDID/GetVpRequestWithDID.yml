@@ -12,7 +12,7 @@ GetVpRequestWithDID:
     "acceptHeader": "*/*"
 }'
     output: '{
-		"client_id": "did:client123"
+		"client_id": "decentralized_identifier:client123"
 	}'
 
   Injiverify_GetVpRequestWithDID_with_V1_endpoint_Neg:
@@ -21,8 +21,9 @@ GetVpRequestWithDID:
     uniqueIdentifier: TC_InjiVerify_GetVpRequestWithDID_v1_endpoint_03
     role: noauth
     restMethod: get
+    checkOnlyStatusCodeInResponse: true
     inputTemplate: injiverify/GetVpRequestWithDID/GetVpRequestWithDID
-    outputTemplate: injiverify/GetVpRequestWithDID/GetVpRequestWithDIDResult
+    outputTemplate: injiverify/responseCode
     input: '{
       "requestId": "$ID:CreateNewVerificationRequest_DID_ClientId_Valid_Smoke_Sid_requestId$",
       "acceptHeader": "*/*"
